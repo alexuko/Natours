@@ -6,19 +6,26 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;    
+}
+
+html{
+    font-size: 62.5%;/*10/16=0.625*/
 }
 
 body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 1.6rem; */
     line-height: 1.7;
     color: #777777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header{
@@ -35,19 +42,18 @@ body{
     clip-path: polygon(0 0, 100% 0, 100% 60%,0 100%);
     position: relative;
 }
+
 .logo-box{
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo{
-    height: 35px;
+    height: 3.5rem;
 }
-.logo:hover{
-    animation: spin 1s ease-out;
-    
-}
+
+
 
 .text-box{
     position: absolute;
@@ -64,14 +70,14 @@ body{
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 .heading-primary-main{
     /*block  elements create like break between them*/
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 2s;
     animation-timing-function: ease-out;
@@ -81,19 +87,19 @@ body{
 }
 .heading-primary-sub{
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
     animation: moveInRight 2s ease-out;
 }
 
 @keyframes moveInLeft{
     0%{
         opacity: 0;
-        transform: translateX(-150px);
+        transform: translateX(-10rem);
     }
     80%{
-        transform: translateX(20px);
+        transform: translateX(1rem);
     }
     100%{
         opacity: 1;
@@ -104,10 +110,10 @@ body{
 @keyframes moveInRight{
     0%{
         opacity: 0;
-        transform: translateX(150px);
+        transform: translateX(10rem);
     }
     80%{
-        transform: translateX(-20px);
+        transform: translateX(-1rem);
     }
     100%{
         opacity: 1;
@@ -118,7 +124,7 @@ body{
 @keyframes moveInBottom{
     0%{
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(3rem);
     }
         100%{
         opacity: 1;
@@ -126,33 +132,28 @@ body{
     }
 }
 
-@keyframes spin{
-    0%{transform: rotateX(10deg)}
-    25%{transform: rotateX(90deg)}
-    50%{transform: rotateX(180deg)}
-    75%{transform: rotateX(270deg)}
-    100%{transform: translate(0) rotate(0)}
-}
+
 .btn:link, 
 .btn:visited{
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block; /* avoid overlaping  giving its own space  */
-    border-radius: 200px;
+    border-radius: 10rem;
     position: relative;
+    font-size: 1.6rem;
    
 
 }
 
 .btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
  /* box-shadow: X  Y   blur   colorPicker*/
 }
 .btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
 }
 .btn-white{
     background-color: #fff;
@@ -163,7 +164,7 @@ body{
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
