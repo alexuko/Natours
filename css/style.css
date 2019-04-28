@@ -43,19 +43,19 @@ body{
     position: relative;
 }
 
-.logo-box{
+.header__logo-box{
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo{
+.header__logo{
     height: 3.5rem;
 }
 
 
 
-.text-box{
+.header__text-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -72,7 +72,7 @@ body{
     backface-visibility: hidden;
     margin-bottom: 6rem;
 }
-.heading-primary-main{
+.heading-primary--main{
     /*block  elements create like break between them*/
     display: block;
     font-size: 6rem;
@@ -85,7 +85,7 @@ body{
     /* animation-delay: 3s; */
     
 }
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -155,7 +155,7 @@ body{
     transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
 }
-.btn-white{
+.btn--white{
     background-color: #fff;
     color: #777;    
 }
@@ -171,14 +171,95 @@ body{
     z-index: -1;/*this will put it behind the original btn*/
     transition: all .4s;
 }
-.btn-white::after{
+.btn--white::after{
     background-color: #fff;
 }
 .btn:hover::after{
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
-.btn-animated{  
+.btn--animated{  
     animation: moveInBottom 1s ease-in-out 1s;
     animation-fill-mode: backwards;
 }
+/*  Codepen
+*{
+  margin:0;
+  padding:0;
+}
+$color-primary: #f9ed69;//yellow color
+$color-secondary:#f08a5d;//orange
+$color-tertiary:#b83b5e;//pink7
+$color-text-dark:#333;
+$color-text-light:#fff;
+
+$width-btn:150px;
+@mixin style-link-text($color){
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color;
+}
+
+nav{
+  margin:30px;
+  background-color:$color-primary;
+  
+  &::after{
+    content:"";
+    clear:both;
+    display:table;
+  }
+}
+
+.navigation{
+  list-style:none;
+  float:left;
+  
+  li{
+    display:inline-block;
+    margin-left:30px;
+    
+      &:first-child{
+      margin:0;
+    }
+    a:link{
+      @include style-link-text($color-text-dark);
+      
+    }
+  }  
+}
+
+.buttons{
+  float:right;
+}
+
+%btn-placeholder{
+  padding: 10px;
+  display:inline-block;
+  text-align:center;
+  border-radius: 100px;
+  width: $width-btn;
+  @include style-link-text($color-text-light);  
+}
+
+
+.btn-main{
+  &:link{
+    @extend %btn-placeholder;
+    background-color:$color-secondary;    
+  }
+  &:hover{
+    background-color: darken($color-secondary,15%); 
+  }
+}
+.btn-hot{
+  &:link{
+    @extend %btn-placeholder;
+    background-color:$color-tertiary;    
+  }
+  &:hover{
+    background-color: lighten($color-tertiary,15%); 
+  }
+}
+
+*/
