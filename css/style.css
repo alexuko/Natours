@@ -1,11 +1,3 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 *,
 *::after,
 *::before {
@@ -163,84 +155,30 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
-/*  Codepen
-*{
-  margin:0;
-  padding:0;
-}
-$color-primary: #f9ed69;//yellow color
-$color-secondary:#f08a5d;//orange
-$color-tertiary:#b83b5e;//pink7
-$color-text-dark:#333;
-$color-text-light:#fff;
-
-$width-btn:150px;
-@mixin style-link-text($color){
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $color;
-}
-
-nav{
-  margin:30px;
-  background-color:$color-primary;
-  
-  &::after{
-    content:"";
-    clear:both;
-    display:table;
-  }
-}
-
-.navigation{
-  list-style:none;
-  float:left;
-  
-  li{
-    display:inline-block;
-    margin-left:30px;
-    
-      &:first-child{
-      margin:0;
-    }
-    a:link{
-      @include style-link-text($color-text-dark);
-      
-    }
-  }  
-}
-
-.buttons{
-  float:right;
-}
-
-%btn-placeholder{
-  padding: 10px;
-  display:inline-block;
-  text-align:center;
-  border-radius: 100px;
-  width: $width-btn;
-  @include style-link-text($color-text-light);  
-}
-
-
-.btn-main{
-  &:link{
-    @extend %btn-placeholder;
-    background-color:$color-secondary;    
-  }
-  &:hover{
-    background-color: darken($color-secondary,15%); 
-  }
-}
-.btn-hot{
-  &:link{
-    @extend %btn-placeholder;
-    background-color:$color-tertiary;    
-  }
-  &:hover{
-    background-color: lighten($color-tertiary,15%); 
-  }
-}
-
-*/
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 *((100% - 2* 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 *((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 *((100% - 3 * 6rem) / 4) + 2 * 6rem); }
