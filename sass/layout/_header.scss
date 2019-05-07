@@ -4,8 +4,10 @@
     background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
     background-size: cover;/*will fit the image in relation to the viewport width*/
     background-position: top; /*if resize top of the image stays the same and crops the bottom or sides if needed*/ 
+    
+    
     /* clip-path: polygon(x y,x y,x y,x y,);*/
-    clip-path: polygon(0 0, 100% 0, 100% 60%,0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
     position: relative;
 
     &__logo-box{

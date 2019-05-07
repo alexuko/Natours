@@ -3,12 +3,13 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;    
+    box-sizing: inherit;
 }
 
 html{
-    //this defines what 1rem is 1rem=16px
-    font-size: 62.5%;/*10/16=0.625*/
+    //this defines what 1rem is 1rem=22px 10/22=0.4545
+    // font-size: 45.4%;
+    font-size: 62.5% ;
 }
 
 body{
