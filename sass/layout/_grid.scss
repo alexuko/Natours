@@ -1,7 +1,6 @@
 .row{
     max-width: $grid-width;
-    // background-color: #eee;
-    margin: 0 auto;
+    margin: 0 auto;    
 
     //.row:not(:last-child) apllies to all the rows exept the last child (row)
     &:not(:last-child){        
@@ -26,6 +25,7 @@
     }
     .col-1-of-3{
         width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+        
 
     }
     .col-2-of-3{
