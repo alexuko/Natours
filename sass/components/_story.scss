@@ -1,13 +1,14 @@
 .story {
     width: 75%;
     margin:0 auto;
-    box-shadow: 0 3rem 4rem rgba($color-black, .3);
-    background-color: $color-white;
+    box-shadow: 0 3rem 6rem rgba($color-black, .3);
+    background-color: rgba($color-white, .5);
     border-radius: 3px;
-    padding: 5rem;
-    padding-left: 7.5rem;
+    padding: 6rem;
+    padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-15deg);
+    
 
     &__shape{
         width: 15rem;
@@ -18,14 +19,16 @@
         shape-outside: circle(50% at 50% 50%);//necesary elements for this property to work(width, height & float)
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
-        transform: translateX(-1.5rem) skewX(15deg);
+        transform: translateX(-3rem) skewX(15deg);
         position: relative;
+        
 
     }
     &__image{
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
         transition: all .5s;
+        
         
     }
     &__text{
