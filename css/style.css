@@ -71,7 +71,6 @@ body {
     animation: moveInRight 2s ease-out; }
 
 .heading-secondary {
-  font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -114,6 +113,15 @@ body {
 
 .u-margin-top-small {
   margin-top: 1.5rem; }
+
+.u-header-big {
+  font-size: 3.5rem; }
+
+.u-header-medium {
+  font-size: 2.5rem; }
+
+.u-header-small {
+  font-size: 1.5rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -458,3 +466,17 @@ body {
 .section-stories {
   padding: 5rem;
   position: relative; }
+
+.section-book {
+  padding: 15rem;
+  background-image: linear-gradient(to right bottom, #55c57a, #28b485); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 50%, transparent 50%), url(../../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.6);
+  height: 40rem; }
+  .book__form {
+    width: 50%;
+    padding: 5rem; }
