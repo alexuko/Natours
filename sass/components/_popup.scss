@@ -45,7 +45,7 @@
     }
 
     &__text{
-        font-size: $small-font-size;
+        font-size: 2rem;
         margin-bottom: 3rem;
 
         column-count: 2;
@@ -78,7 +78,7 @@
             position: absolute;
             top: 1rem;
             right: 1.5rem;
-            font-size: $huge-font-size;
+            font-size: 3.5rem;
             text-decoration: none;
             display: inline-block;
             transition: all .2s;

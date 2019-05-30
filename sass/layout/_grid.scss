@@ -1,10 +1,19 @@
 .row{
-    max-width: $grid-width;
+    max-width: $grid-width;// 114rem = 10px*114 = 1140px
     margin: 0 auto;    
 
     //.row:not(:last-child) apllies to all the rows exept the last child (row)
     &:not(:last-child){        
         margin-bottom: $gutter-vertical;
+
+        @include respond(tab-port){
+            margin-bottom: $gutter-vertical-small;
+        }
+
+    }
+    @include respond(tab-port){
+        max-width: 50rem;
+        // padding: 0 1rem;
     }
     
     @include clearfix;
@@ -15,6 +24,15 @@
         
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+
+            @include respond(tab-port){
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tab-port){
+            width: 100% !important;
         }
 
     }
