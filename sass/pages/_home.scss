@@ -37,6 +37,10 @@
         padding: 18rem 9.5rem 5rem;
     }
 
+    @include respond(phone){  
+        padding: 18rem 3rem 5rem;
+    }
+
 }
 
 .section-stories{
@@ -45,7 +49,11 @@
     position: relative;
 
     @include respond(tab-port){  
-        padding: 10rem 0;
+        padding: 10rem 13rem;
+    }
+
+    @include respond(phone){  
+        padding: 10rem 4rem;
     }
 
 }
