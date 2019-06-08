@@ -1,12 +1,14 @@
 .form{
-
+    
     &__group{
         display: inline-block;
+        width: 100%;
 
         &:not(:last-child) {
             margin-bottom: 2rem;
     
         }
+
     }
 
 
@@ -24,9 +26,7 @@
         width: 90%;
         transition: all .3s;
 
-        @include respond(tab-port){
-            width: 100%;            
-        }
+      
 
         &:focus{
             outline: none;
