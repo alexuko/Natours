@@ -14,12 +14,22 @@
 
 .section-features{
     padding: 20rem 3rem;
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
-                      url(../../img/nat-4.jpg);
+    background-image: linear-gradient(to right bottom,
+                      rgba($color-primary-light, .8),
+                      rgba($color-primary-dark, .8)),
+                      url(../../img/nat-4-small.jpg);
     background-size: cover;
-
     transform: skewY(-7deg);
     margin-top: -11rem;
+    
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 125em) {
+     padding: 20rem 3rem;
+     background-image: linear-gradient(to right bottom,
+                       rgba($color-terciary-light, .8),
+                       rgba($color-terciary-dark, .8)),
+                       url(../../img/nat-4.jpg);
+    }
 
     & > * {
         transform: skewY(7deg);
@@ -71,18 +81,33 @@
 }
 
 .book{
-    background-image: linear-gradient(105deg,rgba($color-white,.6) 0%,rgba($color-white,.6) 50%,transparent 50%), url(../../img/nat-10.jpg);
+    background-image: linear-gradient(105deg,
+                      rgba($color-white,.4) 0%,
+                      rgba($color-white,.6) 50%,
+                      transparent 50%),
+                      url(../../img/nat-10-small.jpg);
     background-size: cover; // 100% = cover
     border-radius: $border-radious-small;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .6);
+    
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 125em) {
+        background-image: linear-gradient(105deg,
+        rgba($color-white,.4) 0%,
+        rgba($color-white,.6) 50%,
+        transparent 50%),
+        url(../../img/nat-10.jpg);
+        
+    }
 
     @include respond(tab-port){
-        background-image: linear-gradient(105deg,rgba($color-white,.6) 0%,rgba($color-white,.6) 65%,transparent 65%), url(../../img/nat-10.jpg);
+        background-image: linear-gradient(105deg,rgba($color-white,.6) 0%,rgba($color-white,.6) 65%,transparent 65%), url(../../img/nat-10-small.jpg);
     }
 
     @include respond(phone){
         margin: 0 3rem;
-        background-image: linear-gradient(to right,rgba($color-white,.6) 100%,rgba($color-white,.6) 65%,transparent 65%), url(../../img/nat-10.jpg);
+        background-image: linear-gradient(to right,rgba($color-white,.6) 100%,rgba($color-white,.6) 65%,transparent 65%), url(../../img/nat-10-small.jpg);
     }
        
 

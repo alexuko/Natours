@@ -1,13 +1,30 @@
 .header{
     height: 95vh;
     /* linear-gradient before the url will give the nice green contrast to the image*/
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url(../img/hero-small.jpg);
     background-size: cover;/*will fit the image in relation to the viewport width*/
     background-position: top; /*if resize top of the image stays the same and crops the bottom or sides if needed*/ 
     /* clip-path: polygon(x y,x y,x y,x y,);*/
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);//firefox
     clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
     position: relative;
+    
+    //dpi => Dots Per Inch          comma , works as OR (min-width: 2000px)
+    // 600px => 37.5em AND 2000px => 125em
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light, 0.8),
+            rgba($color-secondary-dark, 0.8)),
+            url(../img/hero.jpg);
+    }
+
+
 
     @include respond(phone){
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh,0 100%);//firefox
