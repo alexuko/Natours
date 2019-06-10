@@ -6,10 +6,15 @@
     left: 0;
     background-color: rgba($color-black, .8);    
     z-index: 300;
-    // we need to hide the popup
-    opacity: 0;
+    opacity: 0;  // we need to hide the popup
     visibility: hidden;
-    transition: all .4s;
+    
+    @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)){
+        transition: all .4s;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        background-color: rgba($color-black, .3);            
+    }
     
     &__content{
         @include centerHorzAndVrt;   

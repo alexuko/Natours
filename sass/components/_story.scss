@@ -1,10 +1,11 @@
 .story {
-    width: 75%;
+    width: 80%;
     margin:0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .3);
     background-color: rgba($color-white, .5);
     border-radius: 3px;
-    padding: 6rem;
+    padding: 7rem;
+    padding-top: 2rem;
     padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
@@ -28,12 +29,19 @@
         height: 15rem;
         float: left;
         background-color: orangered;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);//necesary elements for this property to work(width, height & float)
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(15deg);
         position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);//necesary elements for this property to work(width, height & float) 
+            border-radius: none;     
+    
+        }
 
         @include respond(phone){
             transform: translateX(-3rem) skewX(0);
