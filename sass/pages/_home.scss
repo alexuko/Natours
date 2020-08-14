@@ -17,7 +17,8 @@
     background-image: linear-gradient(to right bottom,
                       rgba($color-primary-light, .8),
                       rgba($color-primary-dark, .8)),
-                      url(/img/nat-4-small.jpg);
+                    //   url(/img/nat-4-small.jpg);
+                      url(../../img/nat-4-small.jpg);
     background-size: cover;
     transform: skewY(-7deg);
     margin-top: -11rem;
@@ -28,7 +29,7 @@
      background-image: linear-gradient(to right bottom,
                        rgba($color-terciary-light, .8),
                        rgba($color-terciary-dark, .8)),
-                       url(/img/nat-4.jpg);
+                       url(../../img/nat-4.jpg);
     }
 
     & > * {
@@ -85,7 +86,7 @@
                       rgba($color-white,.4) 0%,
                       rgba($color-white,.6) 50%,
                       transparent 50%),
-                      url(/img/nat-10-small.jpg);
+                      url(../../img/nat-10-small.jpg);
     background-size: cover; // 100% = cover
     border-radius: $border-radious-small;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .6);
@@ -97,7 +98,7 @@
         rgba($color-white,.4) 0%,
         rgba($color-white,.6) 50%,
         transparent 50%),
-        url(/img/nat-10.jpg);
+        url(../../img/nat-10.jpg);
         
     }
 
